@@ -1,0 +1,301 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B5F9ADC815DC149C008E4136 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F9ADC715DC149C008E4136 /* Cocoa.framework */; };
+		B5F9ADD215DC149C008E4136 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5F9ADD015DC149C008E4136 /* InfoPlist.strings */; };
+		B5F9ADD415DC149C008E4136 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F9ADD315DC149C008E4136 /* main.m */; };
+		B5F9ADD815DC149C008E4136 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B5F9ADD615DC149C008E4136 /* Credits.rtf */; };
+		B5F9ADDB15DC149C008E4136 /* CloudTaggerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F9ADDA15DC149C008E4136 /* CloudTaggerAppDelegate.m */; };
+		B5F9ADDE15DC149C008E4136 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5F9ADDC15DC149C008E4136 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B5F9ADC315DC149C008E4136 /* CloudTagger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudTagger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5F9ADC715DC149C008E4136 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		B5F9ADCA15DC149C008E4136 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		B5F9ADCB15DC149C008E4136 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B5F9ADCC15DC149C008E4136 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B5F9ADCF15DC149C008E4136 /* CloudTagger-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CloudTagger-Info.plist"; sourceTree = "<group>"; };
+		B5F9ADD115DC149C008E4136 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B5F9ADD315DC149C008E4136 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B5F9ADD515DC149C008E4136 /* CloudTagger-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CloudTagger-Prefix.pch"; sourceTree = "<group>"; };
+		B5F9ADD715DC149C008E4136 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		B5F9ADD915DC149C008E4136 /* CloudTaggerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CloudTaggerAppDelegate.h; sourceTree = "<group>"; };
+		B5F9ADDA15DC149C008E4136 /* CloudTaggerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CloudTaggerAppDelegate.m; sourceTree = "<group>"; };
+		B5F9ADDD15DC149C008E4136 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5F9ADC015DC149C008E4136 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5F9ADC815DC149C008E4136 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B5F9ADB815DC149C008E4136 = {
+			isa = PBXGroup;
+			children = (
+				B5F9ADCD15DC149C008E4136 /* CloudTagger */,
+				B5F9ADC615DC149C008E4136 /* Frameworks */,
+				B5F9ADC415DC149C008E4136 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B5F9ADC415DC149C008E4136 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5F9ADC315DC149C008E4136 /* CloudTagger.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5F9ADC615DC149C008E4136 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5F9ADC715DC149C008E4136 /* Cocoa.framework */,
+				B5F9ADC915DC149C008E4136 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5F9ADC915DC149C008E4136 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5F9ADCA15DC149C008E4136 /* AppKit.framework */,
+				B5F9ADCB15DC149C008E4136 /* CoreData.framework */,
+				B5F9ADCC15DC149C008E4136 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		B5F9ADCD15DC149C008E4136 /* CloudTagger */ = {
+			isa = PBXGroup;
+			children = (
+				B5F9ADD915DC149C008E4136 /* CloudTaggerAppDelegate.h */,
+				B5F9ADDA15DC149C008E4136 /* CloudTaggerAppDelegate.m */,
+				B5F9ADDC15DC149C008E4136 /* MainMenu.xib */,
+				B5F9ADCE15DC149C008E4136 /* Supporting Files */,
+			);
+			path = CloudTagger;
+			sourceTree = "<group>";
+		};
+		B5F9ADCE15DC149C008E4136 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5F9ADCF15DC149C008E4136 /* CloudTagger-Info.plist */,
+				B5F9ADD015DC149C008E4136 /* InfoPlist.strings */,
+				B5F9ADD315DC149C008E4136 /* main.m */,
+				B5F9ADD515DC149C008E4136 /* CloudTagger-Prefix.pch */,
+				B5F9ADD615DC149C008E4136 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5F9ADC215DC149C008E4136 /* CloudTagger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5F9ADE115DC149C008E4136 /* Build configuration list for PBXNativeTarget "CloudTagger" */;
+			buildPhases = (
+				B5F9ADBF15DC149C008E4136 /* Sources */,
+				B5F9ADC015DC149C008E4136 /* Frameworks */,
+				B5F9ADC115DC149C008E4136 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CloudTagger;
+			productName = CloudTagger;
+			productReference = B5F9ADC315DC149C008E4136 /* CloudTagger.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5F9ADBA15DC149C008E4136 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CloudTagger;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Benjamin Marten";
+			};
+			buildConfigurationList = B5F9ADBD15DC149C008E4136 /* Build configuration list for PBXProject "CloudTagger" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B5F9ADB815DC149C008E4136;
+			productRefGroup = B5F9ADC415DC149C008E4136 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5F9ADC215DC149C008E4136 /* CloudTagger */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5F9ADC115DC149C008E4136 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5F9ADD215DC149C008E4136 /* InfoPlist.strings in Resources */,
+				B5F9ADD815DC149C008E4136 /* Credits.rtf in Resources */,
+				B5F9ADDE15DC149C008E4136 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5F9ADBF15DC149C008E4136 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5F9ADD415DC149C008E4136 /* main.m in Sources */,
+				B5F9ADDB15DC149C008E4136 /* CloudTaggerAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B5F9ADD015DC149C008E4136 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5F9ADD115DC149C008E4136 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B5F9ADD615DC149C008E4136 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5F9ADD715DC149C008E4136 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		B5F9ADDC15DC149C008E4136 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5F9ADDD15DC149C008E4136 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B5F9ADDF15DC149C008E4136 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B5F9ADE015DC149C008E4136 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B5F9ADE215DC149C008E4136 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CloudTagger/CloudTagger-Prefix.pch";
+				INFOPLIST_FILE = "CloudTagger/CloudTagger-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B5F9ADE315DC149C008E4136 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CloudTagger/CloudTagger-Prefix.pch";
+				INFOPLIST_FILE = "CloudTagger/CloudTagger-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B5F9ADBD15DC149C008E4136 /* Build configuration list for PBXProject "CloudTagger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5F9ADDF15DC149C008E4136 /* Debug */,
+				B5F9ADE015DC149C008E4136 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5F9ADE115DC149C008E4136 /* Build configuration list for PBXNativeTarget "CloudTagger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5F9ADE215DC149C008E4136 /* Debug */,
+				B5F9ADE315DC149C008E4136 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B5F9ADBA15DC149C008E4136 /* Project object */;
+}
