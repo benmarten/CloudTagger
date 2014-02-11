@@ -2,14 +2,16 @@
 //  CloudTaggerAppDelegate.h
 //  CloudTagger
 //
-//  Created by Benjamin Marten on 15.08.12.
+//  Created by Benjamin Marten on 30.12.12.
 //  Copyright (c) 2012 Benjamin Marten. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
+#import "CloudTaggerWindowController.h"
 
-@interface CloudTaggerAppDelegate : NSObject <NSApplicationDelegate>
+@interface CloudTaggerAppDelegate : NSObject
 
-@property (assign) IBOutlet NSWindow *window;
+@property   CloudTaggerWindowController *windowController;
+- (IBAction)setTrackMetadataToSingle:(id)sender;
 
 @end

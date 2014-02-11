@@ -1,0 +1,5 @@
+/* Localized versions of Info.plist keys */
+
+"Matched AAC audio file" = "Passende AAC-Audiodatei";
+"AAC audio file" = "AAC-Audiodatei";
+"MPEG audio file" = "MPEG-Audiodatei";
