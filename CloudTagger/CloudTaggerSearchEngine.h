@@ -9,10 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "iTunes.h"
 #import "CloudTaggerTrackContainer.h"
-#import "SBJson.h"
 
 @interface CloudTaggerSearchEngine : NSOperation
 
--(id)initWithTrackContainer:(CloudTaggerTrackContainer*)tc;
+- (id)initWithTrackContainer:(CloudTaggerTrackContainer*)tc;
 
 @end

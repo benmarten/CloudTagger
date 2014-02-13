@@ -108,15 +108,15 @@
     NSLog(@"%@", track.kind);
 //    NSLog(@"%@", NSLocalizedString(TRACK_KIND_MATCHED, nil));
     
-    if ([[track kind] isEqualToString:NSLocalizedString(TRACK_KIND_MATCHED, nil)])
+    if ([[track kind] isEqualToString:@"Matched AAC audio file"] || [[track kind] isEqualToString:@"Passende AAC-Audiodatei"])
     {
         return true;
     }
-    else if ([[track kind] isEqualToString:NSLocalizedString(TRACK_KIND_AAC, nil)])
+    else if ([[track kind] isEqualToString:@"AAC audio file"] || [[track kind] isEqualToString:@"AAC-Audiodatei"])
     {
         return true;
     }
-    else if ([[track kind] isEqualToString:NSLocalizedString(TRACK_KIND_MP3, nil)])
+    else if ([[track kind] isEqualToString:@"MPEG audio file"] || [[track kind] isEqualToString:@"MPEG-Audiodatei"])
     {
         return true;
     }

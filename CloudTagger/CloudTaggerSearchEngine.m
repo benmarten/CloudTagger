@@ -10,7 +10,6 @@
 #import "CloudTaggerSearchEngine.h"
 #import "iTunes.h"
 #import "CloudTaggerTrackContainer.h"
-#import "SBJson.h"
 #import <CommonCrypto/CommonDigest.h>
 #import "CloudTaggerConstants.h"
 #import "CloudTaggerUtil.h"
@@ -21,7 +20,6 @@
 @implementation CloudTaggerSearchEngine
 {
     NSOperationQueue *queue;
-    SBJsonParser *parser;
     CloudTaggerTrackContainer* trackContainer;
     CloudTaggerAppDelegate *appDelegate;
     CloudTaggerWindowController *windowController;
@@ -32,8 +30,6 @@
     if (![super init]) return nil;
     
     trackContainer = tc;
-    
-    parser = [[SBJsonParser alloc] init];
     
     [trackContainer setStatus:TRACK_STATUS_QUEUED];
     
@@ -109,7 +105,7 @@
         
         NSString *iTunesStoreURL = [[[@"https://itunes.apple.com/lookup?id=" stringByAppendingFormat:@"%li", iTunesTrackID] stringByAppendingString:@"&country="] stringByAppendingFormat:@"%@", countryCode];
         
-        NSMutableDictionary *iTunesStoreResults = [self getUrlResult:iTunesStoreURL];
+        NSDictionary *iTunesStoreResults = [self getUrlResult:iTunesStoreURL];
         
         NSInteger trackCount = [[iTunesStoreResults objectForKey:@"resultCount"] integerValue];
         
@@ -168,7 +164,7 @@
             
             NSString *iTunesStoreURL = [[[@"https://itunes.apple.com/search?term=" stringByAppendingString: searchTerm] stringByAppendingString:@"&entity=song&country="] stringByAppendingFormat:@"%@", countryCode];
             
-            NSMutableDictionary *iTunesStoreResults = [self getUrlResult:iTunesStoreURL];
+            NSDictionary *iTunesStoreResults = [self getUrlResult:iTunesStoreURL];
             
             for (int i = 0; i <[[iTunesStoreResults objectForKey:@"results"] count]; i++) {
                 NSMutableDictionary *result = [[iTunesStoreResults objectForKey:@"results"] objectAtIndex:i];
@@ -226,15 +222,20 @@
     return iTunesTrackID;
 }
 
--(NSMutableDictionary*)getUrlResult:(NSString*)url
+- (NSDictionary*)getUrlResult:(NSString*)url
 {
+    NSDictionary *result = nil;
+    
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
-    
     NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    NSError *error = nil;
     
-    NSString *json_string = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
+    id data = [NSJSONSerialization JSONObjectWithData:response options:0 error:&error];
     
-    return [parser objectWithString:json_string error:nil];
+    if(data != nil && [data isKindOfClass:[NSDictionary class]])
+        result = data;
+    
+    return result;
 }
 
 -(void)setITunesArtwork:(CloudTaggerMatchedTrack*)mt
@@ -242,10 +243,13 @@
     // set itunes store artwork if not already available in track
     if (trackContainer.track.artworks.count == 0)
     {
-        CloudTaggerArtworkContainer *awc = [[CloudTaggerArtworkContainer alloc] initWithThumbnailUrl:[[NSURL alloc] initWithString:mt.artworkUrl600] andArtworkUrl:[[NSURL alloc] initWithString:mt.artworkUrl600] andRowIndex:trackContainer.rowIndex];
-        
+        if (mt.artworkUrl600 != nil)
+        {
+            CloudTaggerArtworkContainer *awc = [[CloudTaggerArtworkContainer alloc] initWithThumbnailUrl:[[NSURL alloc] initWithString:mt.artworkUrl600] andArtworkUrl:[[NSURL alloc] initWithString:mt.artworkUrl600] andRowIndex:trackContainer.rowIndex];
+    
         mt.artworkContainer = [[NSMutableArray alloc]initWithObjects:awc, nil];
-        
+        }
+            
         [mt setSelectedArtworkIndex:0];
     }
 }

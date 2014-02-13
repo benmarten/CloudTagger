@@ -86,7 +86,7 @@
             [selectedMatchedTrack setSelectedArtworkIndex:0];
             
             [selectedMatchedTrack preloadNextArtwork];
-
+            
             [trackContainer setStatus:TRACK_STATUS_FOUND];
         }
     }
@@ -107,31 +107,44 @@
     
     NSData *googleImages = [[NSData alloc] initWithContentsOfURL:googleImagesUrl];
     
+//    NSLog(@"data: %@", [[NSString alloc] initWithContentsOfURL:googleImagesUrl]);
+    
     TFHpple *imagesParser = [TFHpple hppleWithHTMLData:googleImages];
     
     NSString *imagesXpathQueryString = @"//table[@class='images_table']/tr/td/a";
     NSArray *imageNodes = [imagesParser searchWithXPathQuery:imagesXpathQueryString];
     
-    // 4
     NSMutableArray *images = [[NSMutableArray alloc] initWithCapacity:0];
     for (TFHppleElement *element in imageNodes)
     {
         NSString *fullImageUrlString = [element objectForKey:@"href"];
         
-        NSRange begin = [fullImageUrlString rangeOfString:@"imgurl="];
-        NSRange end = [fullImageUrlString rangeOfString:@"&imgrefurl="];
+        NSLog(@"found image url: %@", fullImageUrlString);
         
-        NSString *imageUrlString = [fullImageUrlString substringWithRange:NSMakeRange(begin.location + begin.length, end.location - begin.location - begin.length)];
+        NSRange begin = [fullImageUrlString rangeOfString:@"url?q="];
+        NSRange end = [fullImageUrlString rangeOfString:@"&sa="];
         
-        NSString *thumbnailUrlString = [[element firstChildWithTagName:@"img"] objectForKey:@"src"];
+        long l_begin = begin.location + begin.length;
+        long l_end = end.location - begin.location - begin.length;
         
-        CloudTaggerArtworkContainer *artworkContainer = [[CloudTaggerArtworkContainer alloc] initWithThumbnailUrl:[[NSURL alloc] initWithString: thumbnailUrlString] andArtworkUrl:[[NSURL alloc] initWithString:imageUrlString] andRowIndex:trackContainer.rowIndex];
-                
-        [images addObject:artworkContainer];
-        
-        if (images.count >= MAX_GOOGLE_IMAGE_SEARCH_RESULTS)
+        if (l_begin < fullImageUrlString.length && l_end <= fullImageUrlString.length && l_end > l_begin)
         {
-            break;
+            NSString *imageUrlString = [fullImageUrlString substringWithRange:NSMakeRange(l_begin, l_end)];
+            
+//            NSString *targetWebsite = [NSString stringWithContentsOfURL:[NSURL URLWithString:imageUrlString]];
+            
+//            NSLog(@"%@", targetWebsite);
+            
+            NSString *thumbnailUrlString = [[element firstChildWithTagName:@"img"] objectForKey:@"src"];
+            
+            CloudTaggerArtworkContainer *artworkContainer = [[CloudTaggerArtworkContainer alloc] initWithThumbnailUrl:[[NSURL alloc] initWithString: thumbnailUrlString] andArtworkUrl:[[NSURL alloc] initWithString:imageUrlString] andRowIndex:trackContainer.rowIndex];
+            
+            [images addObject:artworkContainer];
+            
+            if (images.count >= MAX_GOOGLE_IMAGE_SEARCH_RESULTS)
+            {
+                break;
+            }
         }
     }
     

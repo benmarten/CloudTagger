@@ -7,28 +7,103 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B506188316C805F70001F7EB /* na.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B506188216C805F70001F7EB /* na.jpg */; };
+		B5135B2915F6327300F90FB5 /* CloudTaggerITunesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B5135B2815F6327300F90FB5 /* CloudTaggerITunesHelper.m */; };
+		B5178FD5168DB8BD0030EB4E /* CloudTaggerWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5178FD4168DB8BD0030EB4E /* CloudTaggerWindow.xib */; };
+		B5178FDC168DC6430030EB4E /* CloudTaggerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B5178FDB168DC6430030EB4E /* CloudTaggerDataSource.m */; };
+		B5178FDF168DC9100030EB4E /* CloudTaggerTrackCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5178FDE168DC9100030EB4E /* CloudTaggerTrackCellView.m */; };
+		B5178FE2168DD20F0030EB4E /* CloudTaggerServiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5178FE1168DD20F0030EB4E /* CloudTaggerServiceController.m */; };
+		B519E40F16B59CE5000F35B6 /* NSString+Levenshtein.m in Sources */ = {isa = PBXBuildFile; fileRef = B519E40E16B59CE5000F35B6 /* NSString+Levenshtein.m */; };
+		B519E41316B5A7A9000F35B6 /* CloudTaggerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B519E41216B5A7A9000F35B6 /* CloudTaggerUtil.m */; };
+		B520B04C16B591D700030210 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5135B4115F6388A00F90FB5 /* ScriptingBridge.framework */; };
+		B5240AED16C6CBD900E8AAD2 /* CloudTaggerArtworkContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = B5240AEC16C6CBD900E8AAD2 /* CloudTaggerArtworkContainer.m */; };
+		B54B2AE41629BC7A00949BD3 /* CloudTaggerMatchedTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = B54B2AE31629BC7900949BD3 /* CloudTaggerMatchedTrack.m */; };
+		B54B2AE81629BFED00949BD3 /* CloudTaggerTrackContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = B54B2AE71629BFED00949BD3 /* CloudTaggerTrackContainer.m */; };
+		B5577C1E17EE500E003CBF3E /* CloudTaggerMainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5577C1D17EE500E003CBF3E /* CloudTaggerMainMenu.xib */; };
+		B579025516911C1100FE72D7 /* CloudTaggerConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = B579025416911C1100FE72D7 /* CloudTaggerConstants.m */; };
+		B58DFE731690892500DB04DC /* CloudTaggerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B58DFE721690892500DB04DC /* CloudTaggerAppDelegate.m */; };
+		B58DFE7A16908B0500DB04DC /* CloudTaggerWindowDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B58DFE7916908B0500DB04DC /* CloudTaggerWindowDelegate.m */; };
+		B5A00220168C791A001E3780 /* CloudTaggerGoogleImageSearchEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A0021F168C791A001E3780 /* CloudTaggerGoogleImageSearchEngine.m */; };
+		B5A0022C168C8918001E3780 /* NSString+URLEncodedString.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A0022B168C8918001E3780 /* NSString+URLEncodedString.m */; };
+		B5A00233168C94CE001E3780 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A0022E168C94CE001E3780 /* TFHpple.m */; };
+		B5A00234168C94CE001E3780 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A00230168C94CE001E3780 /* TFHppleElement.m */; };
+		B5A00235168C94CE001E3780 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A00232168C94CE001E3780 /* XPathQuery.m */; };
+		B5A00237168C9612001E3780 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A00236168C9612001E3780 /* libxml2.dylib */; };
+		B5A00241168CFE5A001E3780 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B5A00240168CFE5A001E3780 /* arrow.png */; };
+		B5A00253168D1B9F001E3780 /* CloudTaggerWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A00251168D1B9F001E3780 /* CloudTaggerWindowController.m */; };
+		B5B2D0CF18AC7161008D075D /* music.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B2D0CE18AC7161008D075D /* music.png */; };
+		B5B2D0D118AC716C008D075D /* icon.iconset in Resources */ = {isa = PBXBuildFile; fileRef = B5B2D0D018AC716C008D075D /* icon.iconset */; };
+		B5C64F5616C7C57E00CDDE3F /* CloudTaggerHUDWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C64F5416C7C57D00CDDE3F /* CloudTaggerHUDWindowController.m */; };
+		B5C64F5716C7C57E00CDDE3F /* CloudTaggerHUDWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5C64F5516C7C57D00CDDE3F /* CloudTaggerHUDWindow.xib */; };
+		B5D1790015F69A1E001A898B /* CloudTaggerSearchEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D178FF15F69A1E001A898B /* CloudTaggerSearchEngine.m */; };
 		B5F9ADC815DC149C008E4136 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F9ADC715DC149C008E4136 /* Cocoa.framework */; };
-		B5F9ADD215DC149C008E4136 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5F9ADD015DC149C008E4136 /* InfoPlist.strings */; };
+		B5F9ADD215DC149C008E4136 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5F9ADD015DC149C008E4136 /* Localizable.strings */; };
 		B5F9ADD415DC149C008E4136 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F9ADD315DC149C008E4136 /* main.m */; };
 		B5F9ADD815DC149C008E4136 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B5F9ADD615DC149C008E4136 /* Credits.rtf */; };
-		B5F9ADDB15DC149C008E4136 /* CloudTaggerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F9ADDA15DC149C008E4136 /* CloudTaggerAppDelegate.m */; };
-		B5F9ADDE15DC149C008E4136 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5F9ADDC15DC149C008E4136 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B506188216C805F70001F7EB /* na.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = na.jpg; sourceTree = "<group>"; };
+		B5135B2715F6327300F90FB5 /* CloudTaggerITunesHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudTaggerITunesHelper.h; sourceTree = "<group>"; };
+		B5135B2815F6327300F90FB5 /* CloudTaggerITunesHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudTaggerITunesHelper.m; sourceTree = "<group>"; };
+		B5135B4115F6388A00F90FB5 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
+		B5178FD4168DB8BD0030EB4E /* CloudTaggerWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CloudTaggerWindow.xib; sourceTree = "<group>"; };
+		B5178FDA168DC6430030EB4E /* CloudTaggerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudTaggerDataSource.h; sourceTree = "<group>"; };
+		B5178FDB168DC6430030EB4E /* CloudTaggerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudTaggerDataSource.m; sourceTree = "<group>"; };
+		B5178FDD168DC9100030EB4E /* CloudTaggerTrackCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudTaggerTrackCellView.h; sourceTree = "<group>"; };
+		B5178FDE168DC9100030EB4E /* CloudTaggerTrackCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudTaggerTrackCellView.m; sourceTree = "<group>"; };
+		B5178FE0168DD20F0030EB4E /* CloudTaggerServiceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudTaggerServiceController.h; sourceTree = "<group>"; };
+		B5178FE1168DD20F0030EB4E /* CloudTaggerServiceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudTaggerServiceController.m; sourceTree = "<group>"; };
+		B519E40D16B59CE5000F35B6 /* NSString+Levenshtein.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Levenshtein.h"; sourceTree = "<group>"; };
+		B519E40E16B59CE5000F35B6 /* NSString+Levenshtein.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Levenshtein.m"; sourceTree = "<group>"; };
+		B519E41116B5A7A9000F35B6 /* CloudTaggerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudTaggerUtil.h; sourceTree = "<group>"; };
+		B519E41216B5A7A9000F35B6 /* CloudTaggerUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudTaggerUtil.m; sourceTree = "<group>"; };
+		B520B04B16B591CC00030210 /* iTunes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
+		B5240AEB16C6CBD900E8AAD2 /* CloudTaggerArtworkContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudTaggerArtworkContainer.h; sourceTree = "<group>"; };
+		B5240AEC16C6CBD900E8AAD2 /* CloudTaggerArtworkContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudTaggerArtworkContainer.m; sourceTree = "<group>"; };
+		B54B2AE21629BC7900949BD3 /* CloudTaggerMatchedTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudTaggerMatchedTrack.h; sourceTree = "<group>"; };
+		B54B2AE31629BC7900949BD3 /* CloudTaggerMatchedTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudTaggerMatchedTrack.m; sourceTree = "<group>"; };
+		B54B2AE61629BFED00949BD3 /* CloudTaggerTrackContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudTaggerTrackContainer.h; sourceTree = "<group>"; };
+		B54B2AE71629BFED00949BD3 /* CloudTaggerTrackContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudTaggerTrackContainer.m; sourceTree = "<group>"; };
+		B5577C1D17EE500E003CBF3E /* CloudTaggerMainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CloudTaggerMainMenu.xib; sourceTree = "<group>"; };
+		B579025316911C1100FE72D7 /* CloudTaggerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudTaggerConstants.h; sourceTree = "<group>"; };
+		B579025416911C1100FE72D7 /* CloudTaggerConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudTaggerConstants.m; sourceTree = "<group>"; };
+		B58DFE711690892500DB04DC /* CloudTaggerAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudTaggerAppDelegate.h; sourceTree = "<group>"; };
+		B58DFE721690892500DB04DC /* CloudTaggerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudTaggerAppDelegate.m; sourceTree = "<group>"; };
+		B58DFE7816908B0400DB04DC /* CloudTaggerWindowDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudTaggerWindowDelegate.h; sourceTree = "<group>"; };
+		B58DFE7916908B0500DB04DC /* CloudTaggerWindowDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudTaggerWindowDelegate.m; sourceTree = "<group>"; };
+		B5A0021E168C791A001E3780 /* CloudTaggerGoogleImageSearchEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudTaggerGoogleImageSearchEngine.h; sourceTree = "<group>"; };
+		B5A0021F168C791A001E3780 /* CloudTaggerGoogleImageSearchEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudTaggerGoogleImageSearchEngine.m; sourceTree = "<group>"; };
+		B5A0022A168C8918001E3780 /* NSString+URLEncodedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncodedString.h"; sourceTree = "<group>"; };
+		B5A0022B168C8918001E3780 /* NSString+URLEncodedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncodedString.m"; sourceTree = "<group>"; };
+		B5A0022D168C94CE001E3780 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
+		B5A0022E168C94CE001E3780 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
+		B5A0022F168C94CE001E3780 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
+		B5A00230168C94CE001E3780 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		B5A00231168C94CE001E3780 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		B5A00232168C94CE001E3780 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		B5A00236168C9612001E3780 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		B5A00240168CFE5A001E3780 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		B5A00250168D1B9F001E3780 /* CloudTaggerWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudTaggerWindowController.h; sourceTree = "<group>"; };
+		B5A00251168D1B9F001E3780 /* CloudTaggerWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudTaggerWindowController.m; sourceTree = "<group>"; };
+		B5A1A5C117E7800A00E7344F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B5B2D0CE18AC7161008D075D /* music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = music.png; sourceTree = "<group>"; };
+		B5B2D0D018AC716C008D075D /* icon.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; path = icon.iconset; sourceTree = "<group>"; };
+		B5C64F5316C7C57D00CDDE3F /* CloudTaggerHUDWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudTaggerHUDWindowController.h; sourceTree = "<group>"; };
+		B5C64F5416C7C57D00CDDE3F /* CloudTaggerHUDWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudTaggerHUDWindowController.m; sourceTree = "<group>"; };
+		B5C64F5516C7C57D00CDDE3F /* CloudTaggerHUDWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CloudTaggerHUDWindow.xib; sourceTree = "<group>"; };
+		B5D178FE15F69A1E001A898B /* CloudTaggerSearchEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudTaggerSearchEngine.h; sourceTree = "<group>"; };
+		B5D178FF15F69A1E001A898B /* CloudTaggerSearchEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudTaggerSearchEngine.m; sourceTree = "<group>"; };
 		B5F9ADC315DC149C008E4136 /* CloudTagger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudTagger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5F9ADC715DC149C008E4136 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B5F9ADCA15DC149C008E4136 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		B5F9ADCB15DC149C008E4136 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B5F9ADCC15DC149C008E4136 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B5F9ADCF15DC149C008E4136 /* CloudTagger-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CloudTagger-Info.plist"; sourceTree = "<group>"; };
-		B5F9ADD115DC149C008E4136 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B5F9ADD115DC149C008E4136 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B5F9ADD315DC149C008E4136 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B5F9ADD515DC149C008E4136 /* CloudTagger-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CloudTagger-Prefix.pch"; sourceTree = "<group>"; };
 		B5F9ADD715DC149C008E4136 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		B5F9ADD915DC149C008E4136 /* CloudTaggerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CloudTaggerAppDelegate.h; sourceTree = "<group>"; };
-		B5F9ADDA15DC149C008E4136 /* CloudTaggerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CloudTaggerAppDelegate.m; sourceTree = "<group>"; };
-		B5F9ADDD15DC149C008E4136 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +111,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B520B04C16B591D700030210 /* ScriptingBridge.framework in Frameworks */,
+				B5A00237168C9612001E3780 /* libxml2.dylib in Frameworks */,
 				B5F9ADC815DC149C008E4136 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,6 +120,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B5178FE3168DDB5E0030EB4E /* Hpple */ = {
+			isa = PBXGroup;
+			children = (
+				B5A0022D168C94CE001E3780 /* TFHpple.h */,
+				B5A0022E168C94CE001E3780 /* TFHpple.m */,
+				B5A0022F168C94CE001E3780 /* TFHppleElement.h */,
+				B5A00230168C94CE001E3780 /* TFHppleElement.m */,
+				B5A00231168C94CE001E3780 /* XPathQuery.h */,
+				B5A00232168C94CE001E3780 /* XPathQuery.m */,
+			);
+			name = Hpple;
+			path = CloudTagger;
+			sourceTree = "<group>";
+		};
+		B5A00244168D0A93001E3780 /* gui */ = {
+			isa = PBXGroup;
+			children = (
+				B5577C1D17EE500E003CBF3E /* CloudTaggerMainMenu.xib */,
+				B5178FD4168DB8BD0030EB4E /* CloudTaggerWindow.xib */,
+				B5C64F5516C7C57D00CDDE3F /* CloudTaggerHUDWindow.xib */,
+				B58DFE7816908B0400DB04DC /* CloudTaggerWindowDelegate.h */,
+				B58DFE7916908B0500DB04DC /* CloudTaggerWindowDelegate.m */,
+				B5178FDD168DC9100030EB4E /* CloudTaggerTrackCellView.h */,
+				B5178FDE168DC9100030EB4E /* CloudTaggerTrackCellView.m */,
+				B5178FDA168DC6430030EB4E /* CloudTaggerDataSource.h */,
+				B5178FDB168DC6430030EB4E /* CloudTaggerDataSource.m */,
+				B5C64F5316C7C57D00CDDE3F /* CloudTaggerHUDWindowController.h */,
+				B5C64F5416C7C57D00CDDE3F /* CloudTaggerHUDWindowController.m */,
+			);
+			name = gui;
+			sourceTree = "<group>";
+		};
+		B5A00245168D0AAF001E3780 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				B520B04B16B591CC00030210 /* iTunes.h */,
+				B54B2AE21629BC7900949BD3 /* CloudTaggerMatchedTrack.h */,
+				B54B2AE31629BC7900949BD3 /* CloudTaggerMatchedTrack.m */,
+				B54B2AE61629BFED00949BD3 /* CloudTaggerTrackContainer.h */,
+				B54B2AE71629BFED00949BD3 /* CloudTaggerTrackContainer.m */,
+				B5240AEB16C6CBD900E8AAD2 /* CloudTaggerArtworkContainer.h */,
+				B5240AEC16C6CBD900E8AAD2 /* CloudTaggerArtworkContainer.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		B5F9ADB815DC149C008E4136 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +186,9 @@
 		B5F9ADC615DC149C008E4136 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B5178FE3168DDB5E0030EB4E /* Hpple */,
+				B5A00236168C9612001E3780 /* libxml2.dylib */,
+				B5135B4115F6388A00F90FB5 /* ScriptingBridge.framework */,
 				B5F9ADC715DC149C008E4136 /* Cocoa.framework */,
 				B5F9ADC915DC149C008E4136 /* Other Frameworks */,
 			);
@@ -82,9 +208,20 @@
 		B5F9ADCD15DC149C008E4136 /* CloudTagger */ = {
 			isa = PBXGroup;
 			children = (
-				B5F9ADD915DC149C008E4136 /* CloudTaggerAppDelegate.h */,
-				B5F9ADDA15DC149C008E4136 /* CloudTaggerAppDelegate.m */,
-				B5F9ADDC15DC149C008E4136 /* MainMenu.xib */,
+				B58DFE711690892500DB04DC /* CloudTaggerAppDelegate.h */,
+				B58DFE721690892500DB04DC /* CloudTaggerAppDelegate.m */,
+				B5A00250168D1B9F001E3780 /* CloudTaggerWindowController.h */,
+				B5A00251168D1B9F001E3780 /* CloudTaggerWindowController.m */,
+				B5178FE0168DD20F0030EB4E /* CloudTaggerServiceController.h */,
+				B5178FE1168DD20F0030EB4E /* CloudTaggerServiceController.m */,
+				B5135B2715F6327300F90FB5 /* CloudTaggerITunesHelper.h */,
+				B5135B2815F6327300F90FB5 /* CloudTaggerITunesHelper.m */,
+				B5D178FE15F69A1E001A898B /* CloudTaggerSearchEngine.h */,
+				B5D178FF15F69A1E001A898B /* CloudTaggerSearchEngine.m */,
+				B5A0021E168C791A001E3780 /* CloudTaggerGoogleImageSearchEngine.h */,
+				B5A0021F168C791A001E3780 /* CloudTaggerGoogleImageSearchEngine.m */,
+				B5A00245168D0AAF001E3780 /* model */,
+				B5A00244168D0A93001E3780 /* gui */,
 				B5F9ADCE15DC149C008E4136 /* Supporting Files */,
 			);
 			path = CloudTagger;
@@ -93,8 +230,20 @@
 		B5F9ADCE15DC149C008E4136 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B5A00240168CFE5A001E3780 /* arrow.png */,
+				B579025316911C1100FE72D7 /* CloudTaggerConstants.h */,
+				B579025416911C1100FE72D7 /* CloudTaggerConstants.m */,
+				B519E41116B5A7A9000F35B6 /* CloudTaggerUtil.h */,
+				B519E41216B5A7A9000F35B6 /* CloudTaggerUtil.m */,
+				B5A0022A168C8918001E3780 /* NSString+URLEncodedString.h */,
+				B5A0022B168C8918001E3780 /* NSString+URLEncodedString.m */,
+				B519E40D16B59CE5000F35B6 /* NSString+Levenshtein.h */,
+				B519E40E16B59CE5000F35B6 /* NSString+Levenshtein.m */,
+				B5F9ADD015DC149C008E4136 /* Localizable.strings */,
+				B5B2D0D018AC716C008D075D /* icon.iconset */,
+				B5B2D0CE18AC7161008D075D /* music.png */,
+				B506188216C805F70001F7EB /* na.jpg */,
 				B5F9ADCF15DC149C008E4136 /* CloudTagger-Info.plist */,
-				B5F9ADD015DC149C008E4136 /* InfoPlist.strings */,
 				B5F9ADD315DC149C008E4136 /* main.m */,
 				B5F9ADD515DC149C008E4136 /* CloudTagger-Prefix.pch */,
 				B5F9ADD615DC149C008E4136 /* Credits.rtf */,
@@ -129,7 +278,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = CloudTagger;
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Benjamin Marten";
 			};
 			buildConfigurationList = B5F9ADBD15DC149C008E4136 /* Build configuration list for PBXProject "CloudTagger" */;
@@ -138,6 +287,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				de,
+				Base,
 			);
 			mainGroup = B5F9ADB815DC149C008E4136;
 			productRefGroup = B5F9ADC415DC149C008E4136 /* Products */;
@@ -154,9 +305,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5F9ADD215DC149C008E4136 /* InfoPlist.strings in Resources */,
+				B5577C1E17EE500E003CBF3E /* CloudTaggerMainMenu.xib in Resources */,
+				B5F9ADD215DC149C008E4136 /* Localizable.strings in Resources */,
+				B5B2D0CF18AC7161008D075D /* music.png in Resources */,
 				B5F9ADD815DC149C008E4136 /* Credits.rtf in Resources */,
-				B5F9ADDE15DC149C008E4136 /* MainMenu.xib in Resources */,
+				B5A00241168CFE5A001E3780 /* arrow.png in Resources */,
+				B5B2D0D118AC716C008D075D /* icon.iconset in Resources */,
+				B5178FD5168DB8BD0030EB4E /* CloudTaggerWindow.xib in Resources */,
+				B5C64F5716C7C57E00CDDE3F /* CloudTaggerHUDWindow.xib in Resources */,
+				B506188316C805F70001F7EB /* na.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,19 +325,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5F9ADD415DC149C008E4136 /* main.m in Sources */,
-				B5F9ADDB15DC149C008E4136 /* CloudTaggerAppDelegate.m in Sources */,
+				B5135B2915F6327300F90FB5 /* CloudTaggerITunesHelper.m in Sources */,
+				B5D1790015F69A1E001A898B /* CloudTaggerSearchEngine.m in Sources */,
+				B54B2AE41629BC7A00949BD3 /* CloudTaggerMatchedTrack.m in Sources */,
+				B54B2AE81629BFED00949BD3 /* CloudTaggerTrackContainer.m in Sources */,
+				B5A00220168C791A001E3780 /* CloudTaggerGoogleImageSearchEngine.m in Sources */,
+				B5A0022C168C8918001E3780 /* NSString+URLEncodedString.m in Sources */,
+				B5A00233168C94CE001E3780 /* TFHpple.m in Sources */,
+				B5A00234168C94CE001E3780 /* TFHppleElement.m in Sources */,
+				B5A00235168C94CE001E3780 /* XPathQuery.m in Sources */,
+				B5A00253168D1B9F001E3780 /* CloudTaggerWindowController.m in Sources */,
+				B5178FDC168DC6430030EB4E /* CloudTaggerDataSource.m in Sources */,
+				B5178FDF168DC9100030EB4E /* CloudTaggerTrackCellView.m in Sources */,
+				B5178FE2168DD20F0030EB4E /* CloudTaggerServiceController.m in Sources */,
+				B58DFE731690892500DB04DC /* CloudTaggerAppDelegate.m in Sources */,
+				B58DFE7A16908B0500DB04DC /* CloudTaggerWindowDelegate.m in Sources */,
+				B579025516911C1100FE72D7 /* CloudTaggerConstants.m in Sources */,
+				B519E40F16B59CE5000F35B6 /* NSString+Levenshtein.m in Sources */,
+				B519E41316B5A7A9000F35B6 /* CloudTaggerUtil.m in Sources */,
+				B5240AED16C6CBD900E8AAD2 /* CloudTaggerArtworkContainer.m in Sources */,
+				B5C64F5616C7C57E00CDDE3F /* CloudTaggerHUDWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B5F9ADD015DC149C008E4136 /* InfoPlist.strings */ = {
+		B5F9ADD015DC149C008E4136 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B5F9ADD115DC149C008E4136 /* en */,
+				B5A1A5C117E7800A00E7344F /* de */,
 			);
-			name = InfoPlist.strings;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		B5F9ADD615DC149C008E4136 /* Credits.rtf */ = {
@@ -191,14 +368,6 @@
 			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
-		B5F9ADDC15DC149C008E4136 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B5F9ADDD15DC149C008E4136 /* en */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -206,7 +375,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -224,6 +392,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -234,7 +403,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -246,6 +414,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
 			};
@@ -255,9 +424,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CloudTagger/CloudTagger-Prefix.pch";
 				INFOPLIST_FILE = "CloudTagger/CloudTagger-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -267,9 +445,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CloudTagger/CloudTagger-Prefix.pch";
 				INFOPLIST_FILE = "CloudTagger/CloudTagger-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -294,6 +481,7 @@
 				B5F9ADE315DC149C008E4136 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

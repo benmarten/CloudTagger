@@ -37,6 +37,8 @@
     
     hudWindowController = [[CloudTaggerHUDWindowController alloc] initWithWindowNibName:@"CloudTaggerHUDWindow"];
     
+    [self.searchMissingAlbumartButton setEnabled:NO];
+    
     return self;
 }
 
@@ -321,7 +323,7 @@
     
     [self.searchMetaDataButton setEnabled:YES];
     
-    [self.searchMissingAlbumartButton setEnabled:YES];
+//    [self.searchMissingAlbumartButton setEnabled:YES];
     
     [self.updateTracksButton setEnabled:YES];
 }

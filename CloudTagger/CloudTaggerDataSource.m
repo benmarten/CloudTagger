@@ -85,10 +85,15 @@
     {
         NSBundle *bundle = [NSBundle mainBundle];
         NSString *path = [bundle pathForResource:@"music" ofType:@"png"];
-        artwork = [[NSImage alloc] initWithContentsOfFile:path];
+        if (path != nil)
+        {
+            artwork = [[NSImage alloc] initWithContentsOfFile:path];
+        }
     }
-    [[result albumartNow] setImage:artwork];
-    
+    if (artwork != nil)
+    {
+        [[result albumartNow] setImage:artwork];
+    }
     
     // artist
     [[result artistNow] setStringValue:[track artist]];
