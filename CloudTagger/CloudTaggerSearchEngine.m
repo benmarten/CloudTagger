@@ -160,9 +160,11 @@
             
             NSString *searchTerm = [[[CloudTaggerUtil getFilteredString:track.artist] stringByAppendingString:@" "] stringByAppendingString:[CloudTaggerUtil getFilteredString:track.name]];
             
-            searchTerm = [searchTerm stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+//            searchTerm = [searchTerm stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
             
-            NSString *iTunesStoreURL = [[[@"https://itunes.apple.com/search?term=" stringByAppendingString: searchTerm] stringByAppendingString:@"&entity=song&country="] stringByAppendingFormat:@"%@", countryCode];
+            NSString *encodedSearchString = [searchTerm stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            
+            NSString *iTunesStoreURL = [[[@"https://itunes.apple.com/search?term=" stringByAppendingString: encodedSearchString] stringByAppendingString:@"&entity=song&country="] stringByAppendingFormat:@"%@", countryCode];
             
             NSDictionary *iTunesStoreResults = [self getUrlResult:iTunesStoreURL];
             
@@ -226,7 +228,10 @@
 {
     NSDictionary *result = nil;
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    NSURL *u = [NSURL URLWithString:url];
+//    NSLog(@"%@", u);
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:u];
     NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
     NSError *error = nil;
     
