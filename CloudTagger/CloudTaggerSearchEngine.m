@@ -66,7 +66,7 @@
     if (self.isCancelled == false && exactMatch == NO && [[track.artist stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] isEqualToString:@""] == NO && [[track.name stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] isEqualToString:@""] == NO)
     {
         [self searchItunesStoreStringBased];
-                
+        
         CloudTaggerMatchedTrack *matchedTrack = [trackContainer retrieveSelectedMatchedTrack];
         
         if (matchedTrack != nil)
@@ -106,10 +106,19 @@
         NSString *iTunesStoreURL = [[[@"https://itunes.apple.com/lookup?id=" stringByAppendingFormat:@"%li", iTunesTrackID] stringByAppendingString:@"&country="] stringByAppendingFormat:@"%@", countryCode];
         
         NSDictionary *iTunesStoreResults = [self getUrlResult:iTunesStoreURL];
+        NSInteger trackCount;
         
-        NSInteger trackCount = [[iTunesStoreResults objectForKey:@"resultCount"] integerValue];
+        if (iTunesStoreResults != nil)
+        {
+            trackCount = [[iTunesStoreResults objectForKey:@"resultCount"] integerValue];
+        }
+        else
+        {
+            trackCount = 0;
+        }
         
-        if (trackCount == 1) {
+        if (trackCount == 1)
+        {
             NSLog(@"Exactly 1 result found in iTunes Store for itunesTrackID = %li.", iTunesTrackID);
             
             // set result
@@ -160,7 +169,7 @@
             
             NSString *searchTerm = [[[CloudTaggerUtil getFilteredString:track.artist] stringByAppendingString:@" "] stringByAppendingString:[CloudTaggerUtil getFilteredString:track.name]];
             
-//            searchTerm = [searchTerm stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+            //            searchTerm = [searchTerm stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
             
             NSString *encodedSearchString = [searchTerm stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
             
@@ -168,24 +177,27 @@
             
             NSDictionary *iTunesStoreResults = [self getUrlResult:iTunesStoreURL];
             
-            for (int i = 0; i <[[iTunesStoreResults objectForKey:@"results"] count]; i++) {
-                NSMutableDictionary *result = [[iTunesStoreResults objectForKey:@"results"] objectAtIndex:i];
-                
-                CloudTaggerMatchedTrack *matchedTrack = [[CloudTaggerMatchedTrack alloc] initWithDictionary:result];
-                
-                if ([self isGoodMatchedTrack:matchedTrack] == YES)
-                {
-                    [self setITunesArtwork:matchedTrack];
-
-                    [matchedTrack setMatchRating:[self calculateRatingInPercentForMatchedTrack:matchedTrack andTrack:track]];
+            if (iTunesStoreResults != nil)
+            {
+                for (int i = 0; i <[[iTunesStoreResults objectForKey:@"results"] count]; i++) {
+                    NSMutableDictionary *result = [[iTunesStoreResults objectForKey:@"results"] objectAtIndex:i];
                     
-                    [trackContainer addMatchedTrack:matchedTrack];
-                                        
-                    resultsFound = YES;
+                    CloudTaggerMatchedTrack *matchedTrack = [[CloudTaggerMatchedTrack alloc] initWithDictionary:result];
                     
-                    if (matchedTrack.matchRating >= STRING_BASED_SEARCH_MATCH_TRESHHOLD)
+                    if ([self isGoodMatchedTrack:matchedTrack] == YES)
                     {
-                        canceled = YES;
+                        [self setITunesArtwork:matchedTrack];
+                        
+                        [matchedTrack setMatchRating:[self calculateRatingInPercentForMatchedTrack:matchedTrack andTrack:track]];
+                        
+                        [trackContainer addMatchedTrack:matchedTrack];
+                        
+                        resultsFound = YES;
+                        
+                        if (matchedTrack.matchRating >= STRING_BASED_SEARCH_MATCH_TRESHHOLD)
+                        {
+                            canceled = YES;
+                        }
                     }
                 }
             }
@@ -226,14 +238,19 @@
 
 - (NSDictionary*)getUrlResult:(NSString*)url
 {
+    NSError *error = nil;
     NSDictionary *result = nil;
     
     NSURL *u = [NSURL URLWithString:url];
-//    NSLog(@"%@", u);
     
     NSURLRequest *request = [NSURLRequest requestWithURL:u];
-    NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
-    NSError *error = nil;
+    NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:&error];
+    
+    if (error != nil)
+    {
+        NSLog(@"Connection error: %@", error.description);
+        return nil;
+    }
     
     id data = [NSJSONSerialization JSONObjectWithData:response options:0 error:&error];
     
@@ -251,10 +268,10 @@
         if (mt.artworkUrl600 != nil)
         {
             CloudTaggerArtworkContainer *awc = [[CloudTaggerArtworkContainer alloc] initWithThumbnailUrl:[[NSURL alloc] initWithString:mt.artworkUrl600] andArtworkUrl:[[NSURL alloc] initWithString:mt.artworkUrl600] andRowIndex:trackContainer.rowIndex];
-    
-        mt.artworkContainer = [[NSMutableArray alloc]initWithObjects:awc, nil];
-        }
             
+            mt.artworkContainer = [[NSMutableArray alloc]initWithObjects:awc, nil];
+        }
+        
         [mt setSelectedArtworkIndex:0];
     }
 }
