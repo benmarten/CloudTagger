@@ -280,6 +280,11 @@
 				CLASSPREFIX = CloudTagger;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Benjamin Marten";
+				TargetAttributes = {
+					B5F9ADC215DC149C008E4136 = {
+						DevelopmentTeam = 44E5892T9N;
+					};
+				};
 			};
 			buildConfigurationList = B5F9ADBD15DC149C008E4136 /* Build configuration list for PBXProject "CloudTagger" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -423,6 +428,7 @@
 		B5F9ADE215DC149C008E4136 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -444,6 +450,7 @@
 		B5F9ADE315DC149C008E4136 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
