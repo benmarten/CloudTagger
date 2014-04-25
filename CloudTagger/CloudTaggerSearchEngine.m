@@ -49,7 +49,9 @@
     
     BOOL exactMatch = NO;
     
-    if ([track.kind isEqualToString: TRACK_KIND_MATCHED])
+    NSLog(@"track kind: %@", track.kind);
+    
+    if ([track.kind isEqualToString: NSLocalizedString(@"Matched AAC audio file", nil)])
     {
         exactMatch = [self searchItunesStoreIdBased];
         
