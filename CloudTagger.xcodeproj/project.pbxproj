@@ -282,7 +282,7 @@
 				ORGANIZATIONNAME = "Benjamin Marten";
 				TargetAttributes = {
 					B5F9ADC215DC149C008E4136 = {
-						DevelopmentTeam = 44E5892T9N;
+						DevelopmentTeam = 8Q7834TH4W;
 					};
 				};
 			};
@@ -428,8 +428,9 @@
 		B5F9ADE215DC149C008E4136 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Developer ID Application: Benjamin Marten (44E5892T9N)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8Q7834TH4W;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -450,8 +451,9 @@
 		B5F9ADE315DC149C008E4136 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Developer ID Application: Benjamin Marten (44E5892T9N)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8Q7834TH4W;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
