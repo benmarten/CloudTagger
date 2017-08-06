@@ -96,7 +96,7 @@
     }
     if ([matchedTrack objectForKey:@"artworkUrl100"])
     {
-        [self setArtworkUrl600: [[matchedTrack objectForKey:@"artworkUrl100"] stringByReplacingOccurrencesOfString:@"100x100" withString:@"600x600"]];
+        [self setArtworkUrl600: [[matchedTrack objectForKey:@"artworkUrl100"] stringByReplacingOccurrencesOfString:@"100x100" withString:@"1000x1000"]];
     }
     
     return self;

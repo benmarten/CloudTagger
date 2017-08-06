@@ -265,17 +265,17 @@
 -(void)setITunesArtwork:(CloudTaggerMatchedTrack*)mt
 {
     // set itunes store artwork if not already available in track
-    if (trackContainer.track.artworks.count == 0)
-    {
-        if (mt.artworkUrl600 != nil)
-        {
-            CloudTaggerArtworkContainer *awc = [[CloudTaggerArtworkContainer alloc] initWithThumbnailUrl:[[NSURL alloc] initWithString:mt.artworkUrl600] andArtworkUrl:[[NSURL alloc] initWithString:mt.artworkUrl600] andRowIndex:trackContainer.rowIndex];
-            
-            mt.artworkContainer = [[NSMutableArray alloc]initWithObjects:awc, nil];
-        }
-        
-        [mt setSelectedArtworkIndex:0];
+    if (trackContainer.track.artworks.count != 0) {
+        return;
     }
+    if (mt.artworkUrl600 != nil)
+    {
+        CloudTaggerArtworkContainer *awc = [[CloudTaggerArtworkContainer alloc] initWithThumbnailUrl:[[NSURL alloc] initWithString:mt.artworkUrl600] andArtworkUrl:[[NSURL alloc] initWithString:mt.artworkUrl600] andRowIndex:trackContainer.rowIndex];
+        
+        mt.artworkContainer = [[NSMutableArray alloc]initWithObjects:awc, nil];
+    }
+    
+    [mt setSelectedArtworkIndex:0];
 }
 
 -(BOOL)isGoodMatchedTrack:(CloudTaggerMatchedTrack*)matchedTrack
